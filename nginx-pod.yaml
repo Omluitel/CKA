@@ -1,0 +1,22 @@
+
+# This YAML file defines a Pod named nginx
+# Api version used is v1
+apiVersion: v1
+# Kind of object being defined (Pod in this case)
+kind: Pod
+# Metadata section
+metadata:
+# Name of the Pod
+  name: nginx
+# Spec section
+spec:
+# Containers section defines the container to run in the Pod
+  containers:
+# Definition of the container
+  - name: nginx
+# Image to be used by the container
+    image: nginx:1.14.2
+# Ports exposed by the container
+    ports:
+# Port mapping. Container port 80 is mapped to the Pod's port (which defaults to the same port)
+    - containerPort: 80
